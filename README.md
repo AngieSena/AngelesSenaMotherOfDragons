@@ -1,4 +1,5 @@
 # MotherOfDragons
+<<<<<<< HEAD
 
 Mother of Dragons
 
@@ -10,3 +11,6 @@ Los ingrantes originales de este grupo son:
   SENA, Angeles Maria Magdalena;
   TUCHSCHERR, Aaron;
   VILLANUEVA, Ivan Alberto
+=======
+Repositorio de "Mother Of Dragons" con mejoras y elementos agregados por Angeles Sena
+>>>>>>> 915b4732542bf4ae31214d387a141eec5e144546
