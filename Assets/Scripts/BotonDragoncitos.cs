@@ -18,15 +18,15 @@ public class BotonDragoncitos : MonoBehaviour {
     [SerializeField] public Image[] Ticss;
 
     public void Pintar(int D) {
-		//botonesD[D].color = new Color32 (45, 255, 255, 255);
+		botonesD[D].color = new Color32 (45, 155, 255, 255);
         ticks.SetActive(true);
 	}
 
 	public void Despintar(int D) {
 
-        //botonesD[D].color = new Color32 (255,255,255,255);
+        botonesD[D].color = new Color32 (255,255,255,255);
         //Ticss[D].SetActive(false);
-        ticks.SetActive(true);
+        //ticks.SpriteRenderer(false);
     }
 		
 	void Awake(){

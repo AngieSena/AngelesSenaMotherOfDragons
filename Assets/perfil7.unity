@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1437551027}
+  ticks: {fileID: 324208309}
   cualSoy: 1
   botonesD:
   - {fileID: 1756128269}
@@ -172,6 +173,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &189966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &51755148
 Transform:
   m_ObjectHideFlags: 0
@@ -532,6 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 761293207}
+  ticks: {fileID: 799184067}
   cualSoy: 2
   botonesD:
   - {fileID: 1756128269}
@@ -546,6 +549,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &116181276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &143782791
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &162443427
 Transform:
   m_ObjectHideFlags: 0
@@ -921,7 +925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &324208310
 Transform:
   m_ObjectHideFlags: 0
@@ -1331,6 +1335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 997911866}
+  ticks: {fileID: 2143433707}
   cualSoy: 6
   botonesD:
   - {fileID: 1756128269}
@@ -1345,6 +1350,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &472812231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1436,7 +1442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &665296064
 Transform:
   m_ObjectHideFlags: 0
@@ -1551,6 +1557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1558826229}
+  ticks: {fileID: 1869514471}
   cualSoy: 4
   botonesD:
   - {fileID: 1756128269}
@@ -1565,6 +1572,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &670012747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1893,6 +1901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 2022485097}
+  ticks: {fileID: 1275657938}
   cualSoy: 8
   botonesD:
   - {fileID: 1756128269}
@@ -1907,6 +1916,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &770492189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2037,7 +2047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &799184068
 Transform:
   m_ObjectHideFlags: 0
@@ -2432,6 +2442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1068985998}
+  ticks: {fileID: 665296063}
   cualSoy: 9
   botonesD:
   - {fileID: 1756128269}
@@ -2446,6 +2457,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &977886441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2748,7 +2760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1091676770
 Transform:
   m_ObjectHideFlags: 0
@@ -3169,7 +3181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1275657939
 Transform:
   m_ObjectHideFlags: 0
@@ -3957,7 +3969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1687882441
 Transform:
   m_ObjectHideFlags: 0
@@ -4141,6 +4153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 2029949221}
+  ticks: {fileID: 143782790}
   cualSoy: 11
   botonesD:
   - {fileID: 1756128269}
@@ -4155,6 +4168,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &1790248437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4290,6 +4304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 411492560}
+  ticks: {fileID: 1687882440}
   cualSoy: 5
   botonesD:
   - {fileID: 1756128269}
@@ -4304,6 +4319,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &1819302862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4439,6 +4455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 927694354}
+  ticks: {fileID: 1091676769}
   cualSoy: 3
   botonesD:
   - {fileID: 1756128269}
@@ -4453,6 +4470,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &1853621947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4588,6 +4606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1211978021}
+  ticks: {fileID: 162443426}
   cualSoy: 10
   botonesD:
   - {fileID: 1756128269}
@@ -4602,6 +4621,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &1857268548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4737,6 +4757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 115693126}
+  ticks: {fileID: 51755147}
   cualSoy: 7
   botonesD:
   - {fileID: 1756128269}
@@ -4751,6 +4772,7 @@ MonoBehaviour:
   - {fileID: 977886439}
   - {fileID: 1857268546}
   - {fileID: 1790248435}
+  Ticss: []
 --- !u!114 &1865731523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4842,7 +4864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1869514472
 Transform:
   m_ObjectHideFlags: 0
@@ -5744,7 +5766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2143433708
 Transform:
   m_ObjectHideFlags: 0
