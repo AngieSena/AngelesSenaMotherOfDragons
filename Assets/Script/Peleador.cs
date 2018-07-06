@@ -25,10 +25,6 @@ public class Peleador : MonoBehaviour {
 	[SerializeField]
 	public Animator animator;
 	public HealthBar barraSalud;
-    public GameObject imgdefensa;
-    public GameObject imgataque;
-    public GameObject imgcurar;
-    public GameObject imgspecial;
 	public int vida;
 	public List<Accion> Acciones;
 	public string nombre;
@@ -37,21 +33,21 @@ public class Peleador : MonoBehaviour {
 	public bool aliado;
 	public bool sigueVivo = true;
 	public int perderturnos=0;
-
-    
-      IEnumerator Esperar(){
-        yield return new WaitForSeconds(2);
-        imgdefensa.SetActive(false);
-        imgataque.SetActive(false);
-        imgcurar.SetActive(false);
-        imgspecial.SetActive(false);
-    }  
-    
-
-    
+	public GameObject imgdefensa;
+	public GameObject imgataque;
+	public GameObject imgcurar;
+	public GameObject imgspecial;
 
 
-    void PerderTurnos(int cant) {
+	IEnumerator Esperar(){
+		yield return new WaitForSeconds(2);
+		imgdefensa.SetActive(false);
+		imgataque.SetActive(false);
+		imgcurar.SetActive(false);
+		imgspecial.SetActive(false);
+	} 
+
+	void PerderTurnos(int cant) {
 		perderturnos += cant; 
 	}
 
@@ -66,21 +62,20 @@ public class Peleador : MonoBehaviour {
 		if(vida <=80){
 			CambiarVida (cant);
 		}
+
+		animator.SetTrigger ("Bloqueo");
+
 		imgdefensa.SetActive(true);
-        StartCoroutine(Esperar());
-       
-        animator.SetTrigger ("Bloqueo");	
+		StartCoroutine(Esperar());	
 	}
 
 
 	void Curar (int cant){
-		
+
 		if(vida <= 80){
 			vida += cant;
 		}
-        imgcurar.SetActive(true);
-        StartCoroutine(Esperar());
-    }
+	}
 
 	void CambiarVida(int cant){
 
@@ -89,11 +84,11 @@ public class Peleador : MonoBehaviour {
 
 		if( cant < 0 )
 			animator.SetTrigger ("Daño");
-        imgataque.SetActive(true);
-        StartCoroutine(Esperar());
+		imgataque.SetActive(true);
+		StartCoroutine(Esperar());	
 
-        if (cubrimiento != 1){
-		if (cant < 0){
+		if (cubrimiento != 1){
+			if (cant < 0){
 				cant = (int)(cant / cubrimiento);
 				cubrimiento = 1;
 			}
@@ -155,40 +150,37 @@ public class Peleador : MonoBehaviour {
 		if(perderturnos>0) {
 			perderturnos--;
 		}
-	    else {
+		else {
 			CambiarMana (-accion.costoMana);
 			if (accion.objetivoEsElMismo) { 
 				objetivo = transform;
 				if(accion.nombre== "Curar"){
-                   
-                    animator.SetTrigger ("Curar");
-                    imgcurar.SetActive(true);
-                    StartCoroutine(Esperar());
+					animator.SetTrigger ("Curar");
+					imgcurar.SetActive(true);
+					StartCoroutine(Esperar());
 				}
-			
+
 			}
 
 
 
 			if(accion.nombre== "Golpear")
-            
-               
-                animator.SetTrigger ("Attack");
-            
+				animator.SetTrigger ("Attack");	
+			imgataque.SetActive(true);
+			StartCoroutine(Esperar());
 
-            objetivo.SendMessage (accion.mensaje, accion.argumento);
+			objetivo.SendMessage (accion.mensaje, accion.argumento);
 			print ("mensaje: "+accion.mensaje+" argumento: "+accion.argumento);
-			yield return new WaitForSeconds (2);
+			yield return new WaitForSeconds (1/2);
 
 
 			if (accion.nombre == "Especial") {
-               
-                animator.SetTrigger ("Especial");
-                imgspecial.SetActive(true);
-                StartCoroutine(Esperar());
-
+				animator.SetTrigger ("Especial");
+				imgspecial.SetActive(true);
+				StartCoroutine(Esperar());
 			}
-			
+
 		}
 	}
 }
+

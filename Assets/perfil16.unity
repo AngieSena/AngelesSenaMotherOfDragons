@@ -309,6 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1252131276}
+  ticks: {fileID: 1541367935}
   cualSoy: 8
   botonesD:
   - {fileID: 195446736}
@@ -323,6 +324,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &90596532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,6 +852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 222646536}
+  ticks: {fileID: 470488000}
   cualSoy: 7
   botonesD:
   - {fileID: 195446736}
@@ -864,6 +867,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &354487910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,6 +1076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1457634260}
+  ticks: {fileID: 1104947716}
   cualSoy: 5
   botonesD:
   - {fileID: 195446736}
@@ -1086,6 +1091,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &387807776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,6 +1730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1797516156}
+  ticks: {fileID: 1642082000}
   cualSoy: 4
   botonesD:
   - {fileID: 195446736}
@@ -1738,6 +1745,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &568903590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2348,6 +2356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1137897519}
+  ticks: {fileID: 624014399}
   cualSoy: 3
   botonesD:
   - {fileID: 195446736}
@@ -2362,6 +2371,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &1017612270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3432,6 +3442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 2115593019}
+  ticks: {fileID: 2031516355}
   cualSoy: 11
   botonesD:
   - {fileID: 195446736}
@@ -3446,6 +3457,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &1501115862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3572,6 +3584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 896702924}
+  ticks: {fileID: 425742737}
   cualSoy: 1
   botonesD:
   - {fileID: 195446736}
@@ -3586,6 +3599,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &1501835024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4425,6 +4439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1527262875}
+  ticks: {fileID: 573056394}
   cualSoy: 10
   botonesD:
   - {fileID: 195446736}
@@ -4439,6 +4454,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &1856045003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4906,6 +4922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 1737332628}
+  ticks: {fileID: 961335478}
   cualSoy: 2
   botonesD:
   - {fileID: 195446736}
@@ -4920,6 +4937,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &1998001829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5554,6 +5572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 438912192}
+  ticks: {fileID: 2146197950}
   cualSoy: 6
   botonesD:
   - {fileID: 195446736}
@@ -5568,6 +5587,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &2090266035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5703,6 +5723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 150225886}
+  ticks: {fileID: 1863987869}
   cualSoy: 9
   botonesD:
   - {fileID: 195446736}
@@ -5717,6 +5738,7 @@ MonoBehaviour:
   - {fileID: 2103627864}
   - {fileID: 1856045001}
   - {fileID: 1501115860}
+  Ticss: []
 --- !u!114 &2103627866
 MonoBehaviour:
   m_ObjectHideFlags: 0

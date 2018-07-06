@@ -820,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonOn: 0
   globo: {fileID: 397234727}
-  ticks: {fileID: 0}
+  ticks: {fileID: 1396423382}
   cualSoy: 10
   botonesD:
   - {fileID: 159671242}

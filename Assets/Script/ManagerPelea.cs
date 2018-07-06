@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -80,21 +81,21 @@ public class ManagerPelea : MonoBehaviour
 
 
 		CantidadDePeleas++;
-			Analytics.CustomEvent("PeleaEmepezar", new Dictionary<string, object>
-				{
-					
-					{ "Dragoncito1", Controlador.dragoncito1},
-					{ "Dragoncito2", Controlador.dragoncito2},
-					{ "Enemigo",  Controlador.escenaPrevia },
-					{ "Cantidad",  CantidadDePeleas }
+		Analytics.CustomEvent("PeleaEmepezar", new Dictionary<string, object>
+			{
 
-				});
-		
+				{ "Dragoncito1", Controlador.dragoncito1},
+				{ "Dragoncito2", Controlador.dragoncito2},
+				{ "Enemigo",  Controlador.escenaPrevia },
+				{ "Cantidad",  CantidadDePeleas }
 
-	
+			});
 
-		
-			
+
+
+
+
+
 
 
 	}
@@ -129,8 +130,8 @@ public class ManagerPelea : MonoBehaviour
 						barraEnemigo.SetHealth (peleador.vida);
 					}
 
-				
-			
+
+
 					textoEstado.text += "<color=" + (peleador.aliado ? "blue" : "red") + ">" +
 						peleador.nombre + " HP: " + peleador.vida + "/100 MANA: " + peleador.mana + "/100.</color>\n";
 
@@ -334,13 +335,13 @@ public class ManagerPelea : MonoBehaviour
 		}
 
 		foreach (var peleador in peleadores) {
-	
+
 			if (peleador.nombre != "Dragona" && peleador.nombre != "Mateo") {
 
 				peleador.gameObject.SetActive (false);
 
 			} else {
-				
+
 			}
 		}
 
@@ -350,7 +351,7 @@ public class ManagerPelea : MonoBehaviour
 				dra.gameObject.SetActive (false);
 
 			} else {
-				
+
 			}
 		}
 
@@ -372,7 +373,7 @@ public class ManagerPelea : MonoBehaviour
 			barraAliado2.enabled = true;
 		}
 		if (Controlador.dragoncito2 > -1) {
-			
+
 			dragoncitos [Controlador.dragoncito2].SetActive (true);
 			GameObject marca = GameObject.Find ("Marca Dragoncito 2 Aliado");
 			dragoncitos [Controlador.dragoncito2].transform.position = marca.transform.position;
@@ -387,7 +388,7 @@ public class ManagerPelea : MonoBehaviour
 		if (dragoncitoE2 < 0) {
 			barraEnemigo3.gameObject.SetActive (false);
 		}
-			
+
 		ActualizarInterface ();
 		StartCoroutine ("Bucle");
 		ganaste.Prepare ();
@@ -429,7 +430,7 @@ public class ManagerPelea : MonoBehaviour
 								Button b = null;
 
 								for (int i = 0; i < poolBotones.Count; i++) {
-									
+
 									if (!poolBotones [i].gameObject.activeInHierarchy) {
 										b = poolBotones [i];
 
@@ -440,7 +441,7 @@ public class ManagerPelea : MonoBehaviour
 
 								CantidadDeTurnos++;
 
-								
+
 
 								b = Instantiate (prefab, panel);
 
@@ -486,7 +487,7 @@ public class ManagerPelea : MonoBehaviour
 										}
 */
 
-									
+
 
 
 										if (accion.nombre == "Curar") {
@@ -497,7 +498,7 @@ public class ManagerPelea : MonoBehaviour
 										//} else {
 										//	c = peleador.EjecutarAccion (accion, peleadores [2].transform);
 										//}
-									 
+
 
 									});
 
@@ -520,7 +521,7 @@ public class ManagerPelea : MonoBehaviour
 
 							}
 							//c = peleador.EjecutarAccion (peleador.Acciones [Random.Range (0, peleador.Acciones.Count)],	peleadores [Random.Range (0, (peleadores.Count - 2))].transform);	
-							
+
 							//}
 							//Random.Range (0, peleadores.Count)
 
@@ -535,8 +536,8 @@ public class ManagerPelea : MonoBehaviour
 						yield return StartCoroutine (c);
 						yield return new WaitForSeconds (1);
 					}
-				
-			
+
+
 					if (peleador.aliado) { 
 
 						if (peleador.sigueVivo) {
@@ -549,12 +550,12 @@ public class ManagerPelea : MonoBehaviour
 						}
 					}
 				}
-		
+
 			}
-				
 
 
-			
+
+
 			if (!peleadores[0].sigueVivo ) { 
 				Debug.Log ("PERDISTE");
 				if (Controlador.dragoncito1 > -1) {
@@ -617,7 +618,7 @@ public class ManagerPelea : MonoBehaviour
 						{ "Time", Time.time-StartTime }
 
 					});
-						
+
 
 				perdiste.Play ();
 				yield return new WaitForSeconds (7);
@@ -643,19 +644,22 @@ public class ManagerPelea : MonoBehaviour
 					}
 					if(Controlador.escenaPrevia == "ISRAEL"){
 						Controlador.GanarHijo(dragoncitoE1-DESFASAJE_ENEMIGOS);
+						print (dragoncitoE1);
 					}
 				}
 				resultado = "Ganaste";
-
-
+				print (resultado);
+				print (dragoncitoE1);
 				int cantidDragoncitos = 0;
 				int cantidDragoncitosE = 0;
 				string EventDragoncito1 = "Nada";
+				print (dragoncitoE1+"ESPUES DE EVENTDRAGONCITO1");
 				string EventDragoncito2 = "Nada";
 				string EventDragoncitoE1 = "Nada";
 				string EventDragoncitoE2 = "Nada";
 
 				if (Controlador.dragoncito1 > 0) {
+					print (dragoncitoE1+"ADENTRO DEL IF DE CONTROLADOR DRAGONCITO1");
 					EventDragoncito1 = Controlador.NombresDragoncitos[Controlador.dragoncito1];
 					cantidDragoncitos = 1;
 				}
@@ -665,12 +669,13 @@ public class ManagerPelea : MonoBehaviour
 				}
 
 				if (dragoncitoE1 > 0) {
-					EventDragoncitoE1 = Controlador.NombresDragoncitos[dragoncitoE1];
+					print (dragoncitoE1+"ADENTRO DEL IF DE CONTROLADOR DRAGONCITO1");
+					EventDragoncitoE1 = Controlador.NombresDragoncitos[dragoncitoE1-DESFASAJE_ENEMIGOS];
 					cantidDragoncitosE = 1;
 				}
 
 				if (dragoncitoE2 > 0) {
-					EventDragoncitoE2 = Controlador.NombresDragoncitos[dragoncitoE2];
+					EventDragoncitoE2 = Controlador.NombresDragoncitos[dragoncitoE2-DESFASAJE_ENEMIGOS];
 					cantidDragoncitosE = 2;
 				}
 
@@ -688,7 +693,7 @@ public class ManagerPelea : MonoBehaviour
 						{ "Time", Time.time-StartTime }
 
 					});
-				
+
 				ganaste.Play ();
 				yield return new WaitForSeconds (5);
 				Controlador.escenaPrevia = "no";
@@ -697,7 +702,7 @@ public class ManagerPelea : MonoBehaviour
 		}
 
 	}
-		
+
 	int ElegirEnemigo ()
 	{
 		Debug.Log ("Enemigo:" + enemigoActual + " Dagoncito1: " + dragoncitoE1 + " Dagoncito2: " + dragoncitoE2);
@@ -801,3 +806,4 @@ public class ManagerPelea : MonoBehaviour
 		return cual;
 	}
 }
+	

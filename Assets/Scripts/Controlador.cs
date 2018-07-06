@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 
 public class Controlador : MonoBehaviour {
 	// En vez de esto hay que cargar los dragonciotosm que ya ganaste del save
-	public static bool[] HijosGanados = new bool[]{false, false, false, false, false, false, false, false, false, false, false, false};
+	public static bool[] HijosGanados = new bool[]{true, false, false, false, false, false, false, false, false, false, false, false};
 
 	public static int CantidadDeLikes = 0;
 	public static int CantidadDeCoincidencias = 0;
@@ -47,8 +47,8 @@ public class Controlador : MonoBehaviour {
 	public static bool ganaste = false;
 
 
-//	[SerializeField]
-//	public BotonDragoncitos botonesDragoncitos;
+	//	[SerializeField]
+	//	public BotonDragoncitos botonesDragoncitos;
 
 
 	private int lastNumber;
@@ -77,10 +77,10 @@ public class Controlador : MonoBehaviour {
 			}
 		}
 
-			
+
 
 	}
-		
+
 	void Start(){
 		lastNumber = -1;
 
@@ -109,7 +109,7 @@ public class Controlador : MonoBehaviour {
 						//Debug.Log((j+1) +" "+ lineData[j]);
 						if( lineData[j] == "True")
 							Controlador.HijosGanados[j+1]= true;
-						
+
 					}
 
 				}
@@ -121,7 +121,7 @@ public class Controlador : MonoBehaviour {
 
 	public static void Save(string filename) {
 		Debug.Log ("Save");
-				string line="";
+		string line="";
 		StreamWriter writer = new StreamWriter(filename);
 		for (int j = 1; j < 12; j++) {
 			line += HijosGanados[j] + ";"; 
@@ -130,11 +130,11 @@ public class Controlador : MonoBehaviour {
 		writer.WriteLine(line);
 		writer.Close();
 	}
-		
+
 	public static void GanarHijo(int cual) {
 		Controlador.HijosGanados[cual] = true;
 
-	
+
 
 		Analytics.CustomEvent("TenerHijo", new Dictionary<string, object>
 			{
@@ -142,14 +142,14 @@ public class Controlador : MonoBehaviour {
 				{ "Cual",  NombresDragoncitos[cual]}
 
 			});
-		
+
 		Save (Application.streamingAssetsPath + "/Save.txt");
 	}
 
 	public static void PederHijo(int cual) {
 		Controlador.HijosGanados[cual] = false;
 
-	
+
 
 		Analytics.CustomEvent("PerderHijo", new Dictionary<string, object>
 			{
@@ -157,7 +157,7 @@ public class Controlador : MonoBehaviour {
 				{ "Cual",  NombresDragoncitos[cual]}
 
 			});
-		
+
 		Save (Application.streamingAssetsPath + "/Save.txt");
 	}
 
@@ -188,7 +188,7 @@ public class Controlador : MonoBehaviour {
 	public void CambiarAtras(string nombre){
 
 		print("Cambiando a la escena " + nombre);
-	
+
 		// Voy a carga el video de presentacion del juego y luego a perfil1::: JUGAR
 		if (nombre == "portada") { 
 			StartTime = Time.time;
@@ -200,7 +200,7 @@ public class Controlador : MonoBehaviour {
 
 		// Voy al menu principal::::: SALIR DEL TANDER
 		if (nombre == "juego") { 
-		CantidadDeClicksSalir++;
+			CantidadDeClicksSalir++;
 			Analytics.CustomEvent ("SalirTander", new Dictionary<string, object> {
 				{ "vez", CantidadDeClicksSalir },
 				{ "time", Time.time-StartTime },
@@ -246,7 +246,7 @@ public class Controlador : MonoBehaviour {
 
 
 	public void Coincidencia(string nombre){
-		
+
 		CantidadDeLikes++;
 
 		Analytics.CustomEvent("Likear", new Dictionary<string, object>
@@ -256,7 +256,7 @@ public class Controlador : MonoBehaviour {
 			});
 
 
-				
+
 
 
 		int randomCoinci = Random.Range (0, 100);
@@ -267,7 +267,7 @@ public class Controlador : MonoBehaviour {
 		}
 
 		else {
-			
+
 			CantidadDeDislikes++;
 
 			Analytics.CustomEvent("DesLikear", new Dictionary<string, object>
@@ -275,7 +275,7 @@ public class Controlador : MonoBehaviour {
 					{ "Quien",  SceneManager.GetActiveScene().name },
 					{ "Cantidad", CantidadDeDislikes }
 				});
-			
+
 			CambiarEscena();
 		}
 
@@ -285,37 +285,37 @@ public class Controlador : MonoBehaviour {
 
 		switch(v) {
 
-			case 1:
-				CantDeValMuyBuena++;
-				Analytics.CustomEvent ("ValoracionMuyBuena", new Dictionary<string, object> {
-					{ "Resultado", CantDeValMuyBuena }
-				});
+		case 1:
+			CantDeValMuyBuena++;
+			Analytics.CustomEvent ("ValoracionMuyBuena", new Dictionary<string, object> {
+				{ "Resultado", CantDeValMuyBuena }
+			});
 			SceneManager.LoadScene ("juego");
-				break;
-			
-			case 2:
-				CantDeValBuena++;
-				Analytics.CustomEvent ("ValoracionBuena", new Dictionary<string, object> {
-					{ "Resultado", CantDeValBuena }
-				});
-			SceneManager.LoadScene ("juego");
-				break;
-			
-			case 3:
-				CantDeValRegular++;
-				Analytics.CustomEvent ("ValoracionRegular", new Dictionary<string, object> {
-					{ "Resultado", CantDeValRegular }
-				});
-			SceneManager.LoadScene ("juego");
-				break;
+			break;
 
-			case 4:
-				CantDeValMala++;	
-				Analytics.CustomEvent ("ValoracionMala", new Dictionary<string, object> {
-					{ "Resultado", CantDeValMala }
-				});
+		case 2:
+			CantDeValBuena++;
+			Analytics.CustomEvent ("ValoracionBuena", new Dictionary<string, object> {
+				{ "Resultado", CantDeValBuena }
+			});
 			SceneManager.LoadScene ("juego");
-				break;
+			break;
+
+		case 3:
+			CantDeValRegular++;
+			Analytics.CustomEvent ("ValoracionRegular", new Dictionary<string, object> {
+				{ "Resultado", CantDeValRegular }
+			});
+			SceneManager.LoadScene ("juego");
+			break;
+
+		case 4:
+			CantDeValMala++;	
+			Analytics.CustomEvent ("ValoracionMala", new Dictionary<string, object> {
+				{ "Resultado", CantDeValMala }
+			});
+			SceneManager.LoadScene ("juego");
+			break;
 		case 5:
 			CantDeValMuyMala++;	
 			Analytics.CustomEvent ("ValoracionMuyMala", new Dictionary<string, object> {
@@ -324,10 +324,10 @@ public class Controlador : MonoBehaviour {
 			SceneManager.LoadScene ("juego");
 			break;
 
-			default:
-				;
+		default:
+			;
 
-				break;
+			break;
 
 		}
 	}
